@@ -1,0 +1,136 @@
+.top-logo-background {
+  height: 120px;
+  background-color: #89939E; /* Gray background color */
+  display: flex;
+  justify-content: center; /* Centering horizontally */
+  align-items: center; /* Centering vertically */
+  width: 100%;
+  border-radius: 5px;
+}
+
+.logo {
+  max-width: 100%; /* Ensure the logo doesn't exceed the width of its container */
+  max-height: 100%; /* Ensure the logo doesn't exceed the height of its container */
+}
+
+.content {
+  display: flex;
+}
+
+.facts-container {
+  width: 300px;
+}
+
+.facts-headline {
+  color: #333;
+  font-family: "Agbalumo", system-ui;
+  font-size: 27px;
+}
+
+.facts-list {
+  margin-bottom: 10px; /* Add space between each fact */
+  background-color: #bcbcbc; /* Light gray background */
+  padding: 10px; /* Add padding around each fact */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  font-family: "Agbalumo", system-ui;
+  font-size: large;
+  color: #636365; /* Set text color */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  position: relative; /* Make the position relative to the parent */
+  line-height: 1.5; /* Adjust line height for spacing between lines */
+  margin-bottom: 10px; /* Add spacing between each list item */
+}
+
+li:not(:last-child)::after {
+  content: ''; /* Add content to the pseudo-element */
+  position: absolute; /* Position the line absolutely */
+  bottom: 0; /* Position the line at the bottom of the list item */
+  left: 0; /* Position the line at the left of the list item */
+  width: 100%; /* Make the line full width of the list item */
+  height: 2px; /* Set the height of the line */
+  background-color: #636365; /* Set the color of the line */
+}
+
+.checker-container {
+  display: flex;
+}
+
+.checker-form-container {
+  width: 350px;
+  margin-left: 150px;
+}
+
+.checker-form {
+  display: grid;
+  grid-template-columns: 2;
+}
+
+.checker-headline {
+  color: #333;
+  font-family: "Agbalumo", system-ui;
+  font-size: 27px;
+}
+
+.checker-input {
+  font-family: "Agbalumo", system-ui;
+  margin-left: 10px;
+  width: 330px;
+  margin-right: 0px;
+  border-radius: 5px;
+}
+
+.input-label {
+  font-family: "Agbalumo", system-ui;
+  font-size: 20px;
+  color: #333;
+}
+
+.form-select {
+  font-family: "Agbalumo", system-ui;
+  color: #333;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.select-option {
+  font-family: "Agbalumo", system-ui;
+  color: #333;
+}
+
+#fontSelect option {
+  font-family: "Agbalumo", system-ui;
+}
+
+.submit-button {
+  width: 340px;
+  border-radius: 50px;
+  font-family: "Agbalumo", system-ui;
+  background-color: #333;
+  color: white;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+.checker-grade {
+  font-family: "Agbalumo", system-ui;
+  margin-top: 50px;
+  margin-left: 150px;
+}
+
+.checker-grade-headline {
+  font-size: 40px;
+}
+
+.checker-grade-grade {
+  font-size: 200px;
+  align-self: center;
+}
