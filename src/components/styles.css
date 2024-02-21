@@ -134,6 +134,6 @@ li:not(:last-child)::after {
 }
 
 .checker-grade-grade {
-  font-size: 20px;
+  font-size: 70px;
   align-self: center;
 }

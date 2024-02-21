@@ -14,6 +14,8 @@ const Checker = () => {
 
   const [result, setResult] = useState(null);
 
+  const [grade, setGrade] = useState("");
+
   const handleClick = async () => {
     new Audio(sound).play();
     // Call the async function to make the API call
@@ -63,6 +65,8 @@ const Checker = () => {
         setResult(null);
         setError("An error occurred while making the prediction.");
     }
+
+    setGrade(result.Results.WebServiceOutput0[0].GradePrediction);
 
     console.log(result);
 };
@@ -205,7 +209,7 @@ const Checker = () => {
         <div className="checker-grade-headline">
           And the grade of your milk is:
         </div>
-        <div className="checker-grade-grade">{result.Results.WebServiceOutput0[0].GradePrediction}</div>
+        <div className="checker-grade-grade">{grade}</div>
       </div>
     </div>
   );
