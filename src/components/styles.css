@@ -6,6 +6,9 @@
   align-items: center; /* Centering vertically */
   width: 100%;
   border-radius: 5px;
+  font-size:80px;
+  font-family: "Agbalumo", system-ui;
+  color: #333;
 }
 
 .logo {
