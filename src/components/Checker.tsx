@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent } from "react";
 import sound from "../sounds/animal-sound-cow-mooing_F_major.mp3";
 
 const Checker = () => {
@@ -9,7 +9,6 @@ const Checker = () => {
   const [fat, setFat] = useState(0);
   const [turbidity, setTurbidity] = useState(0);
   const [color, setColor] = useState(0);
-  let grade;
 
   const [error, setError] = useState("");
 
@@ -34,6 +33,8 @@ const Checker = () => {
                 ],
             },
         };
+
+        console.log(data);
 
         const apiKey = "HC7mDitmyYlJPuT8QywBuKVAUFFJ1euz";
         const endpointUrl =
@@ -78,7 +79,7 @@ const Checker = () => {
   };
 
   const handleChangeTaste = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const newValue = parseFloat(event.target.value);
+    const newValue = parseInt(event.target.value);
     setTaste(newValue);
   };
 
@@ -132,12 +133,12 @@ const Checker = () => {
             className="form-select"
             aria-label="Default select example"
             onChange={handleChangeTaste}
-            value={1}
+            value={taste}
           >
-            <option className="select-option" value={1}>
+            <option className="select-option" value="1">
               Good
             </option>
-            <option className="select-option" value={0}>
+            <option className="select-option" value="0">
               Bad
             </option>
           </select>
@@ -147,7 +148,7 @@ const Checker = () => {
             className="form-select"
             aria-label="Default select example"
             onChange={handleChangeOdor}
-            value={1}
+            value={odor}
           >
             <option className="select-option" value={1}>
               Good
@@ -162,7 +163,7 @@ const Checker = () => {
             className="form-select"
             aria-label="Default select example"
             onChange={handleChangeFat}
-            value={1}
+            value={fat}
           >
             <option className="select-option" value={1}>
               High
@@ -177,7 +178,7 @@ const Checker = () => {
             className="form-select"
             aria-label="Default select example"
             onChange={handleChangeTurbidity}
-            value={1}
+            value={turbidity}
           >
             <option className="select-option" value={1}>
               High
@@ -204,7 +205,7 @@ const Checker = () => {
         <div className="checker-grade-headline">
           And the grade of your milk is:
         </div>
-        <div className="checker-grade-grade">{grade}</div>
+        <div className="checker-grade-grade">{result.Results.WebServiceOutput0[0].GradePrediction}</div>
       </div>
     </div>
   );
